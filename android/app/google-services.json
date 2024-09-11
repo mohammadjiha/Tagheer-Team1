@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "452821852399",
+    "project_id": "tageer-app",
+    "storage_bucket": "tageer-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:452821852399:android:5dddbfd311931888b9bb1a",
+        "android_client_info": {
+          "package_name": "com.example.tageer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTnHlarr77H5fEDJX-scsLLdFQG-U1Ytc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

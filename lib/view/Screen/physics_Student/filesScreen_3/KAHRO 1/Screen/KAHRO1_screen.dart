@@ -1,0 +1,269 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sizer/sizer.dart';
+import 'package:tageer/const/color.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+
+import '../../../../../../admaneger/baneer_adds/banner6.dart';
+import '../Widget/KAHRO1_widget.dart';
+
+class KAHRO1 extends StatefulWidget {
+  static const String RoutName = 'KAHRO1';
+
+  const KAHRO1({super.key});
+
+  @override
+  State<KAHRO1> createState() => _KAHRO1State();
+}
+
+class _KAHRO1State extends State<KAHRO1> {
+  final Stream<QuerySnapshot> datapdfStrem =
+      FirebaseFirestore.instance.collection("كهرو 1").snapshots();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: color.backgraound_splash,
+      body: Column(
+        children: [
+          SizedBox(
+            height: 5.h,
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 5.w),
+            child: Row(
+              children: [
+                const Spacer(
+                  flex: 1,
+                ),
+                Text(
+                  'ملفات المواد',
+                  style: TextStyle(
+                      fontSize: 20.sp,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
+                  textAlign: TextAlign.center,
+                ),
+                const Spacer(
+                  flex: 1,
+                ),
+                GestureDetector(
+                  onTap: () => Get.back(),
+                  child: Container(
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                        color: const Color.fromRGBO(102, 189, 255, 1),
+                        borderRadius: BorderRadius.circular(50)),
+                    height: 5.h,
+                    width: 11.w,
+                    child: Image.asset('assets/image/arrow_forward_ios.png'),
+                  ),
+                )
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 3.h,
+          ),
+          Expanded(
+              child: SingleChildScrollView(
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(15),
+                    topLeft: Radius.circular(15)),
+                color: color.backgraound_Home,
+              ),
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 5.w),
+                child: Column(
+                  children: [
+                    SizedBox(height: 1.h,),
+                    BannerAds6(),
+                    SizedBox(
+                      height: 3.h,
+                    ),
+                    Align(
+                      alignment: Alignment.topRight,
+                      child: Text(
+                        ': ملفات المواد',
+                        style: TextStyle(
+                            fontFamily: 'Rubik',
+                            fontSize: 20.sp,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 1.h,
+                    ),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          SizedBox(
+                            width: 2.w,
+                          ),
+                          const KAHRO1Widget(
+                              text1: "كهرو 1",
+                              text3: "ELECTRODYNAMICS",
+                              text2: "INTRODUCTION to كتاب",
+                              pathName:
+                                  "INTRODUCTIONto ELECTRODYNAMICS كتاب المادة "),
+                          SizedBox(
+                            width: 5.w,
+                          ),
+                          const KAHRO1Widget(
+                              text1: "كهرو 1",
+                              text3: "ELECTRODYNAMICS",
+                              text2: "حلول الكتاب",
+                              pathName:
+                                  "حلول الكتاب INSTRUCTOR'S SOLUTIONS MANUAL"),
+                          SizedBox(
+                            width: 5.w,
+                          ),
+                          const KAHRO1Widget(
+                              text1: "كهرو 1",
+                              text3: "للدكتور عادل شاهين",
+                              text2: "تلخيص سنابل سلمان",
+                              pathName:
+                                  " تلخيص سنابل  سلمان للدكتور عادل شاهين "),
+                          SizedBox(
+                            width: 5.w,
+                          ),
+                          const KAHRO1Widget(
+                              text1: "كهرو 1",
+                              text3: " كهرو 1",
+                              text2: "دفتر شرح",
+                              pathName: "دفتر 2 شرح كهرو 2 "),
+                          SizedBox(
+                            width: 5.w,
+                          ),
+                          const KAHRO1Widget(
+                              text1: "كهرو 1",
+                              text3: "للدكتور شرحبيل",
+                              text2: "دفتر شرح كهرو 1",
+                              pathName: "دفتر شرح كهرو 1 د شرحبيل"),
+                          SizedBox(
+                            width: 5.w,
+                          ),
+                          const KAHRO1Widget(
+                              text1: "كهرو 1",
+                              text3: "للدكتور عادل",
+                              text2: "دفتر شرح كهرو 1",
+                              pathName: "دفتر شرح د عادل"),
+                          SizedBox(
+                            width: 5.w,
+                          ),
+                          const KAHRO1Widget(
+                              text1: "كهرو 1",
+                              text3: "للدكتور غسان",
+                              text2: "دفتر شرح كهرو 1",
+                              pathName: "دفتر د غسان"),
+                          SizedBox(
+                            width: 5.w,
+                          ),
+                          const KAHRO1Widget(
+                              text1: "كهرو 1",
+                              text3: "",
+                              text2: "دفتر شرح كهرو 1",
+                              pathName: "دفتر شرح كهرو 1 "),
+                          SizedBox(
+                            width: 5.w,
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 2.h,
+                    ),
+                    Align(
+                      alignment: Alignment.topRight,
+                      child: Text(
+                        ': اسئلة سنوات',
+                        style: TextStyle(
+                            fontFamily: 'Rubik',
+                            fontSize: 20.sp,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 1.h,
+                    ),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          SizedBox(
+                            width: 2.w,
+                          ),
+                          const KAHRO1Widget(
+                              text1: "كهرو 1",
+                              text3: "كاملة",
+                              text2: "سنوات كهرو 1",
+                              pathName: "سنوات كهرو 1 "),
+                          SizedBox(
+                            width: 5.w,
+                          ),
+                          const KAHRO1Widget(
+                              text1: "كهرو 1",
+                              text3: "لكل دكتور",
+                              text2: "سنوات كهرو 1",
+                              pathName: "سنوات لكل دكتور كهرو 1 "),
+                          SizedBox(
+                            width: 5.w,
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 2.h,
+                    ),
+                    Align(
+                      alignment: Alignment.topRight,
+                      child: Text(
+                        ': شروحات للمادة',
+                        style: TextStyle(
+                            fontSize: 20.sp,
+                            color: Colors.black,
+                            fontFamily: 'Rubik',
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 1.h,
+                    ),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          SizedBox(
+                            width: 2.w,
+                          ),
+                          const KAHRO1Widget(
+                              text1: "كهرو 1",
+                              text3: "لا يوجد",
+                              text2: "لا يوجد",
+                              pathName:
+                                  "INTRODUCTIONto ELECTRODYNAMICS كتاب المادة "),
+                          SizedBox(
+                            width: 5.w,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ))
+        ],
+      ),
+    );
+  }
+}
